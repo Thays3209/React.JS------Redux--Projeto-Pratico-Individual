@@ -1,0 +1,69 @@
+
+--------------------------------------index.js---------------------------------------------------------------
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import {combineReducers, createStore} from 'redux';
+import { Provider } from 'react-redux'
+
+function numeroReducer(state = 0, action) {
+
+  if(action.type === "ADICIONAR") {
+    return state +1;
+  } else {
+    return state;
+  }
+}
+
+function nomeReducer(state = "Gui",action) {
+    if (action.type === "ADICIONAR"){
+      return state +1 ;
+    }else {
+      return state 
+    }
+}
+
+const reducers = combineReducers({numeroReducer,nomeReducer})
+const store = createStore(reducers, 
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  );
+
+
+ReactDOM.render(
+  <Provider store={store} > 
+       <App />
+  </Provider>,
+  document.getElementById('root')
+);
+
+
+
+--------------------------------------app.js---------------------------------------------------------------
+
+import React from 'react';
+import {useSelector,useDispatch} from 'react-redux';
+
+
+function App() {
+
+  const state = useSelector((state) => state.numeroReducer);
+  const nome = useSelector((state) => state.nomeReducer);
+  
+  const dispatch = useDispatch();
+  console.log(state);
+
+  return (
+    <div >
+      {state}
+<br></br>
+      {nome}
+<br></br>
+      <button onClick={() => dispatch({type: "ADICIONAR"})}>
+        Adicionar
+      </button>
+    </div>
+  );
+}
+
+export default App;

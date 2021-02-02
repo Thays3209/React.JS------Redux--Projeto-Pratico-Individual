@@ -1,0 +1,87 @@
+body {
+    background: rgb(70,142,236);
+    font: arial 15pt arial;
+}
+
+
+section {
+     background: white;
+     border-radius: 10px;
+     padding: 15px;
+     widows: 500px; 
+     margin:auto;
+     box-shadow: 3px 3px 1px rgba(0, 0, 0, 363);
+     margin-top: 70pt;
+     margin-left: 200pt;
+     margin-right: 200pt;
+     
+}
+
+
+footer {
+     color:white;
+     text-align: center;
+     font-style: italic;
+}
+
+  
+  /* formatando o cabeçalho dos formulários */
+
+  h1{
+    font-size: 48px;
+    color: #066a75;
+    padding: 5px 0;
+    font-family: Arial,sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 0px;
+  }
+
+  label{
+    color: #405c60;
+    position: relative;
+  }
+  
+ 
+  input {
+    outline: none;
+  }
+
+
+  input:not([type="checkbox"]){
+    width: 95%;
+    margin-top: 4px;
+    padding: 10px;  
+    border: 1px solid #b2b2b2;
+    
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  
+ 
+  button {
+    width: 100%!important;
+    cursor: pointer;  
+    background: #3d9db3;
+    padding: 8px 5px;
+    color: #fff;
+    font-size: 20px;  
+    border: 1px solid #fff; 
+    margin-bottom: 10px;  
+    text-shadow: 0 1px 1px #333;
+    
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    
+    transition: all 0.2s linear;
+  }
+
+  
+
+  
